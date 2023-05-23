@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    font-family: "Chango", cursive;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  li,
+  summary {
+    font-family: "Dekko", cursive;
+  }
+  p {
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+/* Info text */
+details > summary {
+  list-style: "+";
+}
+
+details[open] > summary {
+  list-style: "-";
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-image {
+  display: none;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-arrow {
+  position: absolute;
+  color: #ff808a;
+  top: 40%;
+  padding: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.74);
+}
+
+.carousel-arrow.left-arrow {
+  left: 0;
+}
+
+.carousel-arrow.right-arrow {
+  right: 0;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.dot {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 0 8px;
+  border-radius: 50%;
+  background-color: #ffcbcf;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.active-dot {
+  background-color: #ff808a;
+}
+
+.hover-dot {
+  background-color: #ff808a;
+}
